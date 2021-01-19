@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.container {
+  background: #fff;
+  max-width: 350px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+main.container h1 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+main.container h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 30px;
+  height: 4px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  position: relative;
+}
+
+form .input-field:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.input-field input {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+
+.input-field input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"] {
+  background-image: linear-gradient(
+    to left,
+    #8e2de2 0%,
+    #4a00e0 50%,
+    #8e2de2 100%);
+  background-size: 1000px;
+  background-position: left center;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.4rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form input[type="submit"]:focus {
+  outline: none;
+}
+
+form input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+  background-position: right center;
+}
+
+.input-field .underline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background: rgba(0, 0, 0, 0.2);
+  height: 1px;
+  width: 100%;
+}
+
+.input-field .underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  height: 1px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field input:focus ~ .underline::after {
+  transform: scaleX(1);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.footer span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer .social-field {
+  font-size: 0.85rem;
+  padding: 0.4rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.footer .social-field.twitter {
+  background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.footer .social-field.facebook {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.footer .social-field a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer .social-field a i {
+  width: 15px;
+  text-align: center;
+  margin: 0 0.4rem;
+}
